@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100" height="100">
+  <!-- Background Circle -->
+  <circle cx="100" cy="100" r="90" fill="#4A90E2">
+    <animate attributeName="fill" values="#4A90E2;#3498db;#4A90E2" dur="3s" repeatCount="indefinite" />
+  </circle>
+
+  <!-- Face (White Circle) -->
+  <circle cx="100" cy="100" r="60" fill="#ffffff" />
+
+  <!-- Eyes (Simple Circles) -->
+  <circle cx="75" cy="85" r="8" fill="#333" />
+  <circle cx="125" cy="85" r="8" fill="#333" />
+
+  <!-- Smile -->
+  <path d="M 70 115 Q 100 130, 130 115" stroke="#333" stroke-width="4" fill="transparent">
+    <animate attributeName="d" values="M 70 115 Q 100 130, 130 115; M 70 115 Q 100 125, 130 115" dur="1s" repeatCount="indefinite" />
+  </path>
+</svg>
