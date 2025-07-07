@@ -8,12 +8,12 @@ const Navbar = () => {
   // Function to handle the resume download and view
   const handleResumeAction = () => {
     window.open(
-      "https://drive.google.com/file/d/1Zw5lpqx1HuNGpJ49siIFjpCl42ycmL-l/view?usp=sharing",
+      "https://drive.google.com/file/d/17Zj_wB2rGpmnnMDtcNQsMuQDqKA2EyZf/view?usp=sharing",
       "_blank"
     );
     const link = document.createElement("a");
     link.href =
-      "https://drive.google.com/uc?export=download&id=1Zw5lpqx1HuNGpJ49siIFjpCl42ycmL-l";
+      "https://drive.google.com/file/d/17Zj_wB2rGpmnnMDtcNQsMuQDqKA2EyZf/view?usp=sharing";
     link.download = "Resume_Prachisharma.pdf";
     link.click();
   };
