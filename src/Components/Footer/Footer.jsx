@@ -18,7 +18,8 @@ const Footer = () => {
       {/* Section 2: Credit (Centered) */}
       <div className="text-center flex-1">
         <h3 className="text-sm md:text-xl font-normal">
-          Made With 🖤 Prachi Sharma
+          {/* Made With 🖤 Prachi Sharma */}
+          Made With ❤️ Prachi Sharma
         </h3>
       </div>
 

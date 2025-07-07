@@ -1,35 +1,38 @@
 import avatarImg from "../../assets/prachinew.jpeg";
 import TextChange from "../TextChange";
+import VantaBackground from "../VantaBackground/VantaBackground.jsx"; // 3D background
 
 const Home = () => {
   return (
-    <div className="text-white flex flex-col md:flex-row w-full justify-between items-center p-10 md:p-16 pt-664">
-      {/* Text Section */}
-      <div className="flex flex-col items-start justify-start md:justify-center w-full md:w-1/2 lg:w-1/3 xl:w-1/4 mb-4 md:mb-0">
-        {/* Prachi Sharma with fixed height to prevent shifting */}
-        <h1 className="text-xl md:text-6xl font-bold flex leading-normal tracking-tighter mb-4" style={{ minHeight: "4rem" }}>
-          <TextChange />
-        </h1>
+    <div className="relative min-h-screen overflow-hidden">
+      <VantaBackground />
 
-        {/* Statement remains unaffected */}
-        <p className="text-sm md:text-2xl tracking-tight mb-4">
-          MERN Developer crafting beautiful & responsive web experiences
-        </p>
+      <div className="flex flex-col md:flex-row items-center justify-between text-white w-full px-6 md:px-16 py-24 z-10 relative">
+        {/* Left: Text Section */}
+        <div className="w-full md:w-1/2 lg:w-1/3 xl:w-2/5 mb-10 md:mb-0 text-center md:text-left">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold mb-4 leading-tight tracking-tight">
+            <TextChange />
+          </h1>
+          <p className="text-md sm:text-lg md:text-xl lg:text-2xl text-gray-300 mb-6 leading-relaxed">
+            MERN Developer crafting beautiful & responsive web experiences.
+          </p>
+          <a href="#Footer">
+            <button className="bg-[#465697] hover:bg-[#5b6ea4] hover:scale-105 transition duration-300 ease-in-out text-white py-3 px-6 rounded-full text-md md:text-lg shadow-lg">
+              🚀 Let's Connect
+            </button>
+          </a>
+        </div>
 
-        <a href="#Footer">
-          <button className="mt-3 md:mt-6 text-white py-2 px-3 text-sm md:text-lg md:py-2 md:px-4 hover:opacity-85 duration-300 hover:scale-105 font-semibold rounded-3xl bg-[#465697]">
-            Contact Me
-          </button>
-        </a>
-      </div>
-
-      {/* Image Section */}
-      <div className="flex justify-center md:justify-end">
-        <img
-          style={{ maxWidth: "13rem", maxHeight:"79rem", borderRadius: "60px" }}
-          src={avatarImg}
-          alt="Avatar"
-        />
+        {/* Right: Smaller Image Section */}
+        <div className="relative w-40 md:w-56">
+          <div className="rounded-full overflow-hidden shadow-2xl transform hover:scale-105 transition duration-500 ring-4 ring-[#465697] ring-offset-2 ring-offset-gray-900">
+            <img
+              src={avatarImg}
+              alt="Prachi Sharma Avatar"
+              className="w-full h-full object-cover rounded-full"
+            />
+          </div>
+        </div>
       </div>
     </div>
   );

@@ -7,6 +7,8 @@ import Navbar from "./Components/Navbar/Navbar";
 import Projects from "./Components/Projects/Projects";
 import Github from './Components/Github/Github'
 import Contact from "./Components/Contact/Contact";
+import Education from "./Components/Education/Education";
+import Skills from "./Components/Skills/Skills"
 
 function App() {
   return (
@@ -14,7 +16,9 @@ function App() {
       <Navbar />
       <Home />
       <About />
-      <Experience />
+      <Education/>
+      <Skills />
+      <Experience/>
       <Github/>
       <Projects />
       <Contact/>
