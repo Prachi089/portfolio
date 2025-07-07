@@ -7,17 +7,19 @@ const Navbar = () => {
 
   // Function to handle the resume download and view
   const handleResumeAction = () => {
-    window.open(
-      "https://drive.google.com/file/d/17Zj_wB2rGpmnnMDtcNQsMuQDqKA2EyZf/view?usp=sharing",
-      "_blank"
-    );
-    const link = document.createElement("a");
-    link.href =
-      "https://drive.google.com/file/d/17Zj_wB2rGpmnnMDtcNQsMuQDqKA2EyZf/view?usp=sharing";
-    link.download = "Resume_Prachisharma.pdf";
-    link.click();
-  };
+    const url = "/Prachi@CV-SDE.pdf";
 
+    // Open in new tab
+    window.open(url, "_blank");
+
+    // Trigger download
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = "Prachi@CV-SDE.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 flex flex-wrap justify-between items-center px-5 pt-4 pb-3 md:px-10 bg-[#465697] shadow-md">
       {/* Resume Button */}
@@ -32,9 +34,8 @@ const Navbar = () => {
 
       {/* Navigation Links */}
       <ul
-        className={`${
-          menu ? "block" : "hidden"
-        } md:flex flex-col md:flex-row items-center absolute md:static top-16 left-0 right-0 bg-[#465697] md:bg-transparent p-5 md:p-0 rounded-lg md:rounded-none transition-all duration-300 z-50`}
+        className={`${menu ? "block" : "hidden"
+          } md:flex flex-col md:flex-row items-center absolute md:static top-16 left-0 right-0 bg-[#465697] md:bg-transparent p-5 md:p-0 rounded-lg md:rounded-none transition-all duration-300 z-50`}
       >
         <a href="#About" className="w-full md:w-auto">
           <li className="flex items-center gap-2 text-md md:mx-4 py-2 md:py-0 text-white transition-all duration-300 hover:opacity-85 hover:scale-105 text-center md:text-left">
